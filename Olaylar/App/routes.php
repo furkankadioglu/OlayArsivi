@@ -22,7 +22,7 @@ Route::group(array('module' => 'Olaylar', 'middleware' =>  ['web', 'auth'], 'nam
     // Olaylar - CORS
     Route::get('/admin/modules/Olaylar', array('uses' => '\App\Modules\Olaylar\App\Http\Controllers\OlaylarAdminController@index', 'as' => 'admin.Olaylar.index'));
     Route::get('/admin/modules/Olaylar/{id}/delete', array('uses' => '\App\Modules\Olaylar\App\Http\Controllers\OlaylarAdminController@destroy', 'as' => 'admin.Olaylar.destroy'));
-    Route::get('/admin/modules/Olaylar/{id}/{objeId}/delete', array('uses' => '\App\Modules\Olaylar\App\Http\Controllers\ObjelerAdminController@destroy', 'as' => 'admin.Objeler.destroy'));
+    Route::get('/admin/modules/Olaylar/{id}/{objeId}/delete', array('uses' => '\App\Modules\Olaylar\App\Http\Controllers\OlaylarAdminController@objectDestroy', 'as' => 'admin.Objeler.objectDestroy'));
     Route::get('/admin/modules/Olaylar/{id}/edit', array('uses' => '\App\Modules\Olaylar\App\Http\Controllers\OlaylarAdminController@edit', 'as' => 'admin.Olaylar.edit'));
     Route::get('/admin/modules/Olaylar/create', array('uses' => '\App\Modules\Olaylar\App\Http\Controllers\OlaylarAdminController@create', 'as' => 'admin.Olaylar.create'));
     Route::get('/admin/modules/Olaylar/{id}', array('uses' => '\App\Modules\Olaylar\App\Http\Controllers\OlaylarAdminController@show', 'as' => 'admin.Olaylar.show'));

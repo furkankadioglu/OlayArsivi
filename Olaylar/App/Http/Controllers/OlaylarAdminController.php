@@ -194,6 +194,13 @@ class OlaylarAdminController extends AdminTemplateController {
 	    return back();
 	}
 
+	public function objectDestroy($id)
+	{
+		$obje = Obje::find($id);
+		$obje->delete();
+		return back();
+	}
+
 	/**
 	 * Remove the specified resource from storage.
 	 *
